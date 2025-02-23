@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athar</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <header>
+        <!-- Navbar -->
+        <nav class="bg-gradient-to-r from-[#3986ec] to-[#22c264] p-4 shadow-lg">
+            <div class="container mx-auto flex items-center justify-between">
+                
+                <!-- Logo -->
+                <a class="text-yellow-600 font-extrabold text-3xl flex items-center" href="#">
+                   رمضانك
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden block text-gray-700 focus:outline-none" id="nav-toggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="hidden lg:flex items-center space-x-6 w-full lg:w-auto" id="nav-menu">
+                    <ul class="lg:flex pt-3 space-x-6">
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#">الرئيسية</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#Prayer-time">مواقيت الصلاة</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#weoffer">ماذا نقدم؟</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#islamic-books">كتب إسلامية</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#islamic-places">أماكن إسلامية</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#Challenges">تحديات</a></li>
+                        <li><a class="text-gray-700 hover:text-yellow-600 font-medium transition" href="#Reminders">تذكيرات</a></li>
+                    </ul>
+                </div>
+
+                <!-- Call-to-Action Buttons -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#" class="bg-[#22c264] text-white px-5 py-2 rounded-full font-bold hover:bg-[#22c265] transition">تسجيل</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div class="lg:hidden hidden" id="mobile-menu">
+                <ul class="flex flex-col items-center mt-5 space-y-4">
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#">الرئيسية</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#Prayer-time">مواقيت الصلاة</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#weoffer">ماذا نقدم؟</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#islamic-books">كتب إسلامية</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#islamic-places">أماكن إسلامية</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#Challenges">تحديات</a></li>
+                    <li><a class="text-gray-700 hover:text-[#22c264] font-medium transition" href="#Reminders">تذكيرات</a></li>
+                    <li><a href="#" class="bg-yellow-500 text-white px-5 py-2 rounded-full font-bold hover:bg-[#22c264] transition">تسجيل</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- JavaScript for Mobile Menu -->
+        <script>
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');  // Toggle visibility of the mobile menu
+            });
+        </script>
+
+    </header>
+</head>
+<body>
+    <section class="bg-gradient-to-r from-[#3986ec] to-[#22c264] py-16">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-10">
+                
+                <!-- Text Content -->
+                <div class="lg:w-full text-center lg:text-left">
+                    <h1 class="text-4xl font-extrabold text-white leading-tight" style="font-weight: 900;">
+                        تتبع عباداتك وسيبقى الأثر
+                    </h1>
+                    <p class="mt-4 text-white text-lg">
+                        رمضان فرصتك لتجديد العهد مع الله؛ سجّل 
+                        وكن جزءًا من مجتمعنا الذي يسعى للارتقاء بالروح والعبادة.
+                    </p>
+                    <a href="#" 
+                       class="inline-block mt-6 bg-[#3986ec] text-white px-6 py-3 rounded-full 
+                              font-semibold text-lg shadow-md hover:bg-[#22c264] transition duration-300">
+                              →  تسجيل  
+                    </a>
+                </div>
+    
+<!--                
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="img/logo.png" alt="Islamic Travel"
+                             class="w-full max-w-sm bg-white p-3 mx-auto lg:mx-0 rounded-lg shadow-lg transition transform hover:scale-105">
+                        
+                      
+                        <div class="absolute -top-5 -left-5 bg-yellow-400 w-14 h-14 rounded-full opacity-70 animate-pulse"></div>
+                    </div>
+                </div> -->
+    
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-10" id="Prayer-time">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center text-gray-900 pb-5 mb-6">Prayer Times</h2>
+
+            <div class="relative bg-gray-800 text-white rounded-xl p-8 shadow-lg overflow-hidden">
+                <img src="img/screen.PNG" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Mosque Background">
+                
+                <div class="relative text-center">
+                    <p class="text-4xl font-bold my-2" id="current-time">12:21:00</p>
+                    <p class="text-lg">25 February, 2024</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-6 text-center">
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Fajr</h4>
+                        <p class="text-xl font-bold" id="fajr-time">--:--</p>
+                    </div>
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Dhuhr</h4>
+                        <p class="text-xl font-bold" id="dhuhr-time">--:--</p>
+                    </div>
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Asr</h4>
+                        <p class="text-xl font-bold" id="asr-time">--:--</p>
+                    </div>
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Maghrib</h4>
+                        <p class="text-xl font-bold" id="maghrib-time">--:--</p>
+                    </div>
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Isha</h4>
+                        <p class="text-xl font-bold" id="isha-time">--:--</p>
+                    </div>
+                    <div class="p-4 bg-black bg-opacity-75 rounded-lg">
+                        <h4 class="text-lg font-semibold">Jumah</h4>
+                        <p class="text-xl font-bold" id="jumah-time">--:--</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function updateTime() {
+                let now = new Date();
+                let timeString = now.toLocaleTimeString();
+                document.getElementById("current-time").innerText = timeString;
+            }
+            setInterval(updateTime, 1000);
+        </script>
+    </section>
+     <!-- What We Do Section -->
+     <section class="py-10" id="weoffer">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">ماذا نقدم ؟</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto"> يمكنك تتبع عباداتك اليومية ومراقبة تقدمك بطريقة سهلة وممتعة!</p>
+
+            <div id="whatWeDoCarousel" class="carousel slide mt-6" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white shadow-lg m-3 rounded-lg p-4">
+                                <img src="img/goals.png" class="w-32 mr-[80px] rounded-md mb-3" alt="Daily Prayers">
+                                <h3 class="text-xl font-semibold">تحديات يومية</h3>
+                                <p class="text-gray-600">إنشاء تحديات يومية وأسبوعية (مثل ختم القرآن، صيام النوافل، الصدقة اليومية).</p>
+                            </div>
+                            <div class="bg-white shadow-lg m-3 rounded-lg p-4">
+                                <img src="img/dont-forget.png" class="w-32 mr-[80px] rounded-md mb-3" alt="Children Teaching">
+                                <h3 class="text-xl font-semibold">تذكير في العبادات</h3>
+                                <p class="text-gray-600">إرسال إشعارات مخصصة بناءً على تقدم المستخدم، مثلتنبيهات لوقت السحور، الإفطار، وقيام الليل</p>
+                            </div>
+                            <div class="bg-white shadow-lg m-3 rounded-lg p-4">
+                                <img src="img/follow-up.png" class="w-32 mr-[80px] rounded-md mb-3" alt="Children Teaching">
+                                <h3 class="text-xl font-semibold">تتبع التقدم</h3>
+                                <p class="text-gray-600">عرض تقدم المستخدم اليومي والأسبوعي في العبادات المختلفة مثل الصلاة، التراويح، قراءة القرآن</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Publishing Islamic Magazines Section -->
+    <section class="py-10 bg-white" id="islamic-books">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-2 gap-4">
+                <img src="img/bokhry.jpg" class="rounded-lg shadow-lg w-full" alt="Mosque">
+                <img src="img/1044.png" class="rounded-lg shadow-lg w-full" alt="Prayers">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">كتب إسلامية تساعدك في العبادات</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-[#3986ec] text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-lg"></i>
+                        </div>
+                        <div class="mr-[10px]">
+                            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%AA%D9%81%D8%B3%D9%8A%D8%B1-%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86-%D8%A7%D9%84%D8%B9%D8%B8%D9%8A%D9%85-%D8%AA%D9%81%D8%B3%D9%8A%D8%B1-%D8%A7%D8%A8%D9%86-%D9%83%D8%AB%D9%8A%D8%B1-%D8%B7-%D8%A7%D8%A8%D9%86-%D8%AD%D8%B2%D9%85-pdf" target="_blank"><h4 class="text-xl font-semibold " style="color: #212545;" >تفسير ابن كثير</h4></a>
+                            <p class="text-gray-600">يُعد من أشهر كتب التفسير في الإسلام، حيث يقدم شرحًا مبسطًا وعميقًا للآيات القرآنية مع الاستناد إلى الأحاديث والآثار.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#3986ec] text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-lg"></i>
+                        </div>
+                        <div class="mr-[10px]">
+                            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%B5%D8%AD%D9%8A%D8%AD-%D8%A7%D9%84%D8%A8%D8%AE%D8%A7%D8%B1%D9%8A-pdf" target="_blank"> <h4 class="text-xl font-semibold" style="color: #212545;">صحيح البخاري</h4></a>
+                            
+                            <p class="text-gray-600"> أصح كتب الحديث النبوي، يجمع أحاديث الرسول صلى الله عليه وسلم بدقة وعناية، ويُعتمد عليه في استنباط الشريعة.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#3986ec] text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-book text-lg"></i>
+                        </div>
+                        <div class="mr-[10px]">
+                            <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B1%D8%AD%D9%8A%D9%82-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%88%D9%85-pdf" target="_blank"><h4 class="text-xl font-semibold" style="color: #212545;">الرحيق المختوم</h4></a>
+                            <p class="text-gray-600">سيرة نبوية معاصرة تجمع بين السرد التاريخي والتحليل العلمي، موثقة لحياة النبي محمد صلى الله عليه وسلم بأسلوب سلس وجذاب.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Most Important Islamic Places Section -->
+   <section class="py-10" id="islamic-places">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold text-gray-900 pb-5 mb-6">أهم الأماكن الاسلامية حول العالم</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            <!-- Place 1 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/Kaaba.PNG" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Kaaba">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Kaaba</h3>
+                    <p class="text-sm">The holiest place in Islam, located in Mecca.</p>
+                </div>
+            </div>
+
+            <!-- Place 2 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/Al-Masjid An-Nabawi.PNG" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Al-Masjid An-Nabawi">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Al-Masjid An-Nabawi</h3>
+                    <p class="text-sm">The Prophet's Mosque in Medina.</p>
+                </div>
+            </div>
+
+            <!-- Place 3 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/Al-Aqsa Mosque.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Al-Aqsa Mosque">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Al-Aqsa Mosque</h3>
+                    <p class="text-sm">A sacred mosque in Jerusalem.</p>
+                </div>
+            </div>
+
+            <!-- Place 4 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/Rock-mosque.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Quba Mosque">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Quba Mosque</h3>
+                    <p class="text-sm">The first mosque built in Islam.</p>
+                </div>
+            </div>
+
+            <!-- Place 5 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/emarat.png" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Imam Hussain Shrine">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Imam Hussain Shrine</h3>
+                    <p class="text-sm">A significant site in Karbala.</p>
+                </div>
+            </div>
+
+            <!-- Place 6 -->
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="img/Sultan Ahmed Mosque.png" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" alt="Sultan Ahmed Mosque">
+                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-white">
+                    <h3 class="text-xl font-semibold">Sultan Ahmed Mosque</h3>
+                    <p class="text-sm">Known as the Blue Mosque in Turkey.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- قسم التحديات -->
+    <section class="py-12" id="Challenges">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-6"> تحديات وجوائز تحفيزية </h2>
+            <p class="text-center text-gray-700 mb-8">شارك في التحديات اليومية واحصل على المكافآت عند إتمامها!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- تحدي ختم القرآن -->
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center transition hover:shadow-xl hover:scale-105">
+                    <img src="img/moshaf.png" class="w-48 mx-auto mb-3 rounded-lg" alt="ختم القرآن">
+                    <h3 class="text-xl font-semibold text-gray-900">📖 ختم القرآن</h3>
+                    <p class="text-gray-600 mt-2">اقرأ جزءًا يوميًا وأكمل ختم القرآن خلال رمضان.</p>
+                    <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">ابدأ التحدي</button>
+                </div>
+
+                <!-- تحدي الصيام النوافل -->
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center transition hover:shadow-xl hover:scale-105">
+                    <img src="img/syam.PNG" class="w-48 mx-auto mb-3 rounded-lg" alt="الصيام">
+                    <h3 class="text-xl font-semibold text-gray-900">🌙 صيام النوافل</h3>
+                    <p class="text-gray-600 mt-2">صُم يومي الاثنين والخميس لكسب نقاط إضافية.</p>
+                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">ابدأ التحدي</button>
+                </div>
+
+                <!-- تحدي الصدقة اليومية -->
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center transition hover:shadow-xl hover:scale-105">
+                    <img src="img/sadaqa.png" class="w-48 mx-auto mb-3 rounded-lg" alt="الصدقة">
+                    <h3 class="text-xl font-semibold text-gray-900">💰 الصدقة اليومية</h3>
+                    <p class="text-gray-600 mt-2">تصدق بمبلغ صغير يوميًا وحقق البركة.</p>
+                    <button class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">ابدأ التحدي</button>
+                </div>
+            </div>
+
+            <!-- عرض النقاط -->
+            <div class="text-center mt-10">
+                <h3 class="text-2xl font-semibold text-gray-900">🏆 نقاطك الحالية: <span id="points" class="text-blue-600">0</span> نقطة</h3>
+                <p class="text-gray-600 mt-2">استمر في التحديات لجمع المزيد من النقاط واستبدالها بالمكافآت.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذكيرات ذكية - تصميم جديد -->
+<section class="py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white" id="Reminders">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">🔔 تذكيرات ذكية</h2>
+        <p class="text-lg mb-10">احصل على تنبيهات لتنظيم عباداتك خلال رمضان بكل سهولة!</p>
+
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- بطاقة 1 -->
+            <div class="w-72 p-6 bg-white text-gray-900 rounded-xl shadow-lg transform hover:scale-105 transition">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mx-auto mb-4">
+                    🕌
+                </div>
+                <h3 class="text-2xl font-semibold">تذكير الصلاة</h3>
+                <p class="text-gray-600 mt-2">تنبيهات لدخول أوقات الصلاة.</p>
+                <button class="mt-4 px-5 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">تفعيل</button>
+            </div>
+
+            <!-- بطاقة 2 -->
+            <div class="w-72 p-6 bg-white text-gray-900 rounded-xl shadow-lg transform hover:scale-105 transition">
+                <div class="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full mx-auto mb-4">
+                    📿
+                </div>
+                <h3 class="text-2xl font-semibold">تذكير الأذكار</h3>
+                <p class="text-gray-600 mt-2">إشعارات لأذكار الصباح والمساء.</p>
+                <button class="mt-4 px-5 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">تفعيل</button>
+            </div>
+
+            <!-- بطاقة 3 -->
+            <div class="w-72 p-6 bg-white text-gray-900 rounded-xl shadow-lg transform hover:scale-105 transition">
+                <div class="flex items-center justify-center w-16 h-16 bg-yellow-500 text-white rounded-full mx-auto mb-4">
+                    🌙
+                </div>
+                <h3 class="text-2xl font-semibold">تذكير السحور والإفطار</h3>
+                <p class="text-gray-600 mt-2">مواقيت السحور والإفطار بناءً على موقعك.</p>
+                <button class="mt-4 px-5 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">تفعيل</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- About Section -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">📌 عن الموقع</h3>
+                <p class="text-gray-400">موقع تتبع العبادات في رمضان يساعدك على تنظيم عباداتك وتطويرها خلال الشهر الفضيل.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">🔗 روابط سريعة</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#" class="hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">تحديات العبادات</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">التذكيرات</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">التواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">📬 تواصل معنا</h3>
+                <ul class="text-gray-400 space-y-2">
+                   
+                    <li>📞 الهاتف: +972 598700073</li>
+                    <li>✉️ الإيميل: abedallaemara24@gmail.com</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">📢 اشترك في النشرة البريدية</h3>
+                <p class="text-gray-400 mb-3">احصل على تحديثات يومية حول عباداتك ونصائح رمضان.</p>
+                <div class="flex">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" class="w-full p-2 rounded-l-lg text-gray-900 focus:outline-none">
+                    <button class="px-4 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition">اشترك</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="mt-10 text-center">
+            <h3 class="text-lg font-semibold mb-3">📲 تابعنا على</h3>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl transition"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8 text-gray-500 text-sm">
+            <p>جميع الحقوق محفوظة &copy; 2025 | موقع تتبع العبادات في رمضان</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FontAwesome Icons (for social media) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+<!-- FontAwesome for Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
