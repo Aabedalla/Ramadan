@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body{
+    font-family: "Cairo", serif !important;
+}
+a{
+    text-decoration: none !important;
+    color: aliceblue !important;
+    
+}
+a:hover{
+    color: #22c264;
+}
+.logoname{
+    font-size: larger !important;
+}
+.hearder-section{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: bottom;
+}
+.plane img{
+    padding-top: 5rem;
+}
+.companyTitle {
+    margin-bottom: 20px;
+}
+.companyTitle h1{
+    color: white;
+    font-family: fantasy;
+    font-size: 65px;
+    text-align: left;
+    padding-top: 5rem;
+}
+.companyTitle p{
+    color: white;
+    text-align: left;
+    padding: 20px 0px;
+}
+.companyTitle a{
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
